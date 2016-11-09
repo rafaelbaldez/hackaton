@@ -7,8 +7,8 @@ var App = angular.module('App', [
 App.config(function($routeProvider){
 	$routeProvider
 	.when('/', {
-		templateUrl: 'views/read.html',
-		controller: 'ReadCtrl'
+		templateUrl: 'views/agente/agente.html',
+		controller: 'AgenteCtrl'
 	})
 
 	.when('/create', {
@@ -17,9 +17,9 @@ App.config(function($routeProvider){
 	})
 
 	.when('/edit/:id', {
-		templateUrl: 'views/edit.html',
-		controller: 'EditCtrl'
+		templateUrl: 'views/agente/editAgente.html',
+		controller: 'EditAgenteCtrl'
 	})
 });
 
-App.value('API', 'http://localhost:8080/angular-app/service/');
+App.value('API', 'http://localhost:8081/angular-app/service/');
