@@ -20,10 +20,10 @@ App.controller('AgenteCtrl', function($scope, AgenteService, $route){
 
 //App.controller('EditAgenteCtrl', function($scope, AgenteService, $routeParams, $location){
 
-
+	//var id = $routeParams.idAgente;
 	$scope.atualizar = function(item){
 		console.log(item);
-		AgenteService.update(item, item.idAgente).then(function(data){
+		AgenteService.update(item, item.id).then(function(data){
 			$location.path('/');
 		});
 	}
